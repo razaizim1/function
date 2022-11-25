@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body>
+    <div>
+        <h1 id="heading">Hello EveryOne</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ullam vitae tempore est quam iste in laudantium? Beatae, quam provident similique incidunt a deleniti explicabo consequatur, atque, repudiandae ipsum rem sapiente! Beatae aut tempore, modi possimus ad corporis doloremque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore eum voluptatibus, quidem commodi repellendus!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, rem?</p>
+        <button id="first">click me-1</button>
+        <button id="second">click me-2</button>
+        <button id="third">click me-3</button>
+        <script>
+            var firstBtn = document.getElementById('first');
+            firstBtn.addEventListener('click', function(){
+                document.body.style.backgroundColor = 'red'
+            })
+
+            var secondBtn = document.getElementById('second');
+            secondBtn.addEventListener('click', function(){
+                document.body.style.backgroundColor = 'blue'
+            })
+
+            var thirdBtn = document.getElementById('third');
+            thirdBtn.addEventListener('click', function(){
+                // document.body.style.fontSize = '40px';
+                document.getElementById('heading').style.color = 'white'; 
+                var whenClick = document.getElementById('heading');
+                var afterClick =  document.createElement ('h2');
+                afterClick.innerHTML= 'It has been clicked';
+                heading.appendChild(afterClick);
+                afterClick.style.color = 'red';
+                
+                
+            })
+        </script>
+    </div>
+</body>
+</html>
